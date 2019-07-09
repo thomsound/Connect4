@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>connect four</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="body-bg"></div>
+        <div id="game-container" class="">
+            <canvas id="grid-container"></canvas>
+            <div class="settings">
+                <form id="prefs">
+                    <div id="btn_newGame" tabindex="1">New Game</div>
+                    <label for="n_players"># of players
+                        <input id="n_players" type="number" name="nPlayers" value="2">
+                    </label>
+                    <label for="connect_n"> connect #
+                        <input id="connect_n" type="number" name="connectN" value="4">
+                    </label>
+                    <label for="n_cols"># of columns
+                        <input id="n_cols" type="number" name="nCols" value="7">
+                    </label>
+                    <label for="n_rows"># of rows
+                        <input id="n_rows" type="number" name="nRows" value="6">
+                    </label>
+                </form>
+            </div>
+        </div>
+
+        <script src="js/three.min.js" type="text/javascript"></script>
+        <script src="js/OBJLoader.js" type="text/javascript"></script>
+        <script src="js/C4Logic.js" type="text/javascript"></script>
+        <script src="js/C4UI3D.js" type="text/javascript"></script>
+        <script src="js/C4Game.js" type="text/javascript"></script>
+    </body>
+</html>

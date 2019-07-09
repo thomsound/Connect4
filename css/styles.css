@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+:root {
+    --board-color: 309;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+.body-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    filter:  contrast(80%) brightness(150%) grayscale(100%);
+    background-image: url('../pics/funny-table-wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -10;
+}
+.playing canvas {
+    cursor: none;
+}
+#game-container {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#btn_newGame {
+    position: relative;
+    display: inline-block;
+    z-index: 10000;
+    margin: 12px auto;
+    width: 90%;
+    height: 48px;
+    padding: 5px;
+    border-radius: 25px;
+    border: solid 1px hsl(var(--board-color),5%,18%);
+    background-color: rgb(120, 120, 120);
+    color: beige;
+    font-size: 30px;
+    font-family: "Arial Rounded MT Bold";
+    font-weight: bold;
+    line-height: 125%;
+    text-align: center;
+    transition: all 0.2s ease;
+    box-shadow: inset 2px 2px 11px 4px hsl(var(--board-color),5%,18%), inset -2px -2px 7px 2px white, inset 2px -2px 4px 2px black;
+    cursor: pointer;
+}
+#btn_newGame:hover {
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: darkcyan;
+    text-shadow: 1px 1px 1px antiquewhite, -1px 2px 7px antiquewhite, -1px -2px 2px aliceblue;
+    box-shadow: inset 2px 2px 11px 2px hsl(var(--board-color),5%,18%), inset -2px -2px 7px 1px white, inset 2px -2px 4px 1px black, 0 0 3px 1px darkcyan;
+}
+#grid-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+#prefs {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.settings {
+    position: absolute;
+    bottom: 76%;
+    z-index: 10000;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    width: 320px;
+    max-width: 60%;
+    height: 320px;
+    max-height: 60%;
+    border-radius: 25px;
+    border: solid 1px;
+    background-color: rgba(100,100,100,.8);
+    font-size: 22px;
+    font-family: "Arial Rounded MT Bold";
+    font-weight: normal;
+    padding: 15px;
+    transition: all 1s ease;
+    letter-spacing: 1px;
+    border-color: hsl(var(--board-color),5%,18%);
+    box-shadow: inset 2px 2px 11px 4px hsl(var(--board-color),5%,18%), inset -2px -2px 7px 2px white, inset 2px -2px 4px 2px black, -1px 2px 15px 3px hsl(var(--board-color),5%,18%);
+    text-shadow: -1px 1px 5px #888;
+    text-align: center;
+}
+.playing .settings {
+    bottom: 0;
+}
+ul {
+    list-style: none;
+    display: inline-block;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+li {
+    text-align: right;
+    margin: 5% 0;
+}
+label {
+    color: white;
+    width: 70%;
+    min-width: 210px;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: left;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 2px hsl(var(--board-color),5%,18%);
+}
+.settings input {
+    font-size: 25px;
+    border-radius: 5px;
+    width: 60px;
+    text-align: center;
+    float: right;
+    color: hsl(var(--board-color),5%,18%);
+}
+
+@media
+screen and (max-width: 500px),
+screen and (max-height: 500px) {
+    .settings {
+        position: absolute;
+        height: 90%;
+        width: 90%;
+        max-width: 100%;
+        min-width: 260px;
+        max-height: 100%;
+        min-height: 250px;
+        top: 5%;
+        left: 5%;
+        transform: none;
+    }
+    .playing .settings {
+        top: 100%;
+    }
+}
