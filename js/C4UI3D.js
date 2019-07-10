@@ -1,7 +1,7 @@
 
 /**
  * @file This contains the C4Logic object
- * @author Carlo Thomsen 2019
+ * @author thomsound 2019
  */
 
 /**
