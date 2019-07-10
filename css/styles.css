@@ -14,8 +14,8 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    filter:  contrast(80%) brightness(150%) grayscale(100%);
-    background-image: url('../pics/funny-table-wallpaper.jpg');
+    filter: contrast(90%) brightness(120%) grayscale(80%);
+    background-image: url('../pics/c4_thomsound_background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -10;

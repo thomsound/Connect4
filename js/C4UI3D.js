@@ -170,9 +170,8 @@ function C4UI3D(nCols, nRows, nPlayers) {
         var textMaterial = new THREE.MeshPhongMaterial( { color: msgColor } );
         var textMesh = new THREE.Mesh(geometry, textMaterial);
 
-        // geometry.computeBoundingBox();
-        // var centerOffset = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
-        var centerOffset = - 0.5 * ( 223.361 - 0.853 );
+        geometry.computeBoundingBox();
+        var centerOffset = - 0.5 * ( geometry.boundingBox.max.x - geometry.boundingBox.min.x );
         var ratio = gc.offsetWidth / gc.offsetHeight;
         var scaleToSmallScreen = ratio < 1.2 ? 100 : 0;
         textMesh.position.x = centerOffset;
