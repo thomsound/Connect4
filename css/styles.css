@@ -14,7 +14,7 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    filter: contrast(90%) brightness(120%) grayscale(80%);
+    filter: contrast(60%) brightness(140%) grayscale(70%) blur(4px);
     background-image: url('../pics/c4_thomsound_background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
