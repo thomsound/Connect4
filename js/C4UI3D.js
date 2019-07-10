@@ -109,7 +109,7 @@ function C4UI3D(nCols, nRows, nPlayers) {
         var tokenMaterial = new THREE.MeshPhongMaterial( { color: colors[player] } );
         // load object from .obj-file
         loader.load(
-            '../obj/c4_token v1.obj',
+            'obj/c4_token v1.obj',
             // onload
             function( object ) {
                 // set material for all child elements
@@ -149,7 +149,7 @@ function C4UI3D(nCols, nRows, nPlayers) {
 
     var fontLoader = new THREE.FontLoader();
     fontLoader.load(
-        '../fonts/Arial Rounded MT Bold_Regular.json',
+        'fonts/Arial Rounded MT Bold_Regular.json',
         (fnt) => font = fnt
     );
     this.newText = function( player ) {
